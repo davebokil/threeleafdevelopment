@@ -1,0 +1,102 @@
+<!--================= main ====================-->
+<div id="main">
+    <!--=============== header ================--> 
+    {{> header}}  
+    <!--=============== wrapper ===============--> 
+    <div id="wrapper">
+        <!-- content-holder  -->
+        <div class="content-holder">
+            <!-- Page title -->
+            <div class="dynamic-title">{{portfolio.title}}</div>
+            <!-- Page title  end--> 
+            <!-- content  -->
+            <!-- content  -->
+            <div class="content">
+                <section class="parallax-section">
+                    <div class="parallax-inner">
+                        <div class="bg" data-bg="{{portfolio.metadata.lead_image.imgix_url}}" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="container">
+                        <div class="page-title">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2><strong>{{portfolio.title}}</strong></h2>
+                                    <h3>{{portfolio.metadata.location}}</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="creat-list">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/portfolio">Portfolio</a></li>
+                                        <li><a href="/portfolio/{{portfolio.slug}}">{{portfolio.title}}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- content end -->
+            <div class="content">
+                <section>
+                    <div class="container">
+                        <div class="single-slider-holder lightgallery" data-looped="0">
+                            <div class="single-slider" data-loppsli="0">
+                                {{#if portfolio.metadata.images}}
+                                    {{#each portfolio.metadata.images}}
+                                    <div class="item">
+                                        <img src="{{image.imgix_url}}" alt="">
+                                        <a data-src="{{image.imgix_url}}" class="popup-image slider-zoom">
+                                        <i class="fa fa-expand"></i> 
+                                        </a>
+                                    </div>
+                                    {{/each}}
+                                {{/if}}
+                            </div>
+                            <div class="customNavigation ssn">
+                                <a class="prev-slide transition"><i class="fa fa-angle-left"></i></a>
+                                <a class="next-slide transition"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- single slider  end -->
+                        <div class="custom-inner-holder">
+                            <!-- 1 -->  
+                            <div class="custom-inner">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>Project details</h3>
+                                    </div>
+                                    <div class="col-md-6">
+                                        {{{portfolio.content}}}
+                                        <div class="content-nav">
+                                            <ul>
+                                                <li><a href="/portfolio" class=" text-link">Back to Portfolio</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 -->
+                        </div>
+                        <!-- custom-link-holder  end -->
+                    </div>
+                </section>
+            </div>
+            <!-- content end -->
+            <!-- content footer-->
+            <div class="height-emulator"></div>
+            {{> footer}}
+            <!-- content footer end -->
+            <!-- share  -->
+            <div class="share-inner">
+                <div class="share-container  isShare"  data-share="['facebook','googleplus','twitter','linkedin']"></div>
+                <div class="close-share"></div>
+            </div>
+            <!-- share end -->
+        </div>
+        <!-- content-holder  end-->
+        {{> leftbar}} 
+    </div> 
+    <!--=============== footer ================--> 
+    {{> leftbar}} 
+</div>

@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="../assets/css/main.css" />
+<!-- Page wrapper -->
+<div id="page-wrapper">
+    <!-- Main -->
+    <section id="main" class="wrapper loginpage">
+        <div class="inner">
+            <header class="major special">
+                <img src="../images/big-site.png" alt="" style="margin-top: 2rem; max-width: 63.75rem; border-bottom: 1px solid rgba(255, 255, 255, 0.25); padding-bottom: 1.5rem; margin-bottom: 0px;     border-color: rgba(99, 116, 133, 0.25);" class="image fit">
+                <p style="text-align: center;"><a href="https://www.nbpafoundation.com/" style="color: #aa915a; text-decoration: none;">National Basketball Players Association Foundation</a></p>
+            </header>
+            <form method="post" action="/users/login" id="signup-form">
+                <div class="row gtr-uniform">
+                    <div style="display: none;">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username" value="bighearts">
+                    </div>
+                    <div class="col-12 col-12-xsmall">
+                        <input type="password" name="password" id="demo-name" value="" placeholder="Password" />
+                    </div>
+                    <!-- Break -->
+                    <div class="col-12">
+                        <div class="col-3 col-12-small">
+                            <ul class="actions stacked">
+                                <input type="submit" value="Sign in" class="button fit" />
+                            </ul>
+                        </div>
+                        <div class="warnings">
+                            {{#if success_msg}}
+                            <div class="alert alert-success">{{success_msg}}</div>
+                            {{/if}}
+                            {{#if error_msg}}
+                            <div class="alert alert-danger">
+                                <p style="font-style: italic;">{{error_msg}}</p>
+                            </div>
+                            {{/if}}
+                            {{#if error}}
+                            <div class="alert alert-danger">
+                                <p style="font-style: italic;">{{error}}</p>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <p style="font-size: 12px;">* This site was developed exclusively as a resource for NBA Players and their teams</p>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+<!-- Scripts -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.scrollex.min.js"></script>
+<script src="../assets/js/jquery.scrolly.min.js"></script>
+<script src="../assets/js/jquery.selectorr.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>

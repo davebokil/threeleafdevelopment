@@ -1,0 +1,25 @@
+{
+  "addons": [
+    "mongolab"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "description": "",
+  "env": {
+    "MONGODB_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "financialresources",
+  "scripts": {
+  },
+  "stack": "heroku-16"
+}
