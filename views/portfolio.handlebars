@@ -42,10 +42,15 @@
                         <div class="filter-holder inline-filter">
                             <div class="gallery-filters">
                                 <a href="#" class="gallery-filter transition2 gallery-filter_active" data-filter="*">All</a>
-                                <a href="#" class="gallery-filter transition2" data-filter=".interior">Interior</a>
+{{!--                                 <a href="#" class="gallery-filter transition2" data-filter=".interior">Interior</a>
                                 <a href="#" class="gallery-filter transition2" data-filter=".construction">Construction</a>
                                 <a href="#" class="gallery-filter transition2" data-filter=".design">Design</a>
-                                <a href="#" class="gallery-filter transition2" data-filter=".houses">Houses</a>
+                                <a href="#" class="gallery-filter transition2" data-filter=".houses">Houses</a> --}}
+                                {{#if tags}}
+                                    {{#each tags}}
+                                    <a href="#" class="gallery-filter transition2" data-filter=".{{slug}}">{{title}}</a>
+                                    {{/each}}
+                                {{/if}} 
                             </div>
                             <div class="count-folio">
                                 <div class="num-album"></div>
@@ -54,158 +59,24 @@
                         </div>
                         <!-- filter end-->
                         <!--=============== portfolio holder ===============-->
-                        <div class="gallery-items   three-columns grid-small-pad ">
-                            <!-- 1 -->
-                            <div class="gallery-item  interior houses construction">
-                                <div class="grid-item-holder">
-                                    <img  src="images/folio/thumbs/2.jpg"    alt="">
-                                    <div class="port-desc-holder">
-                                        <div class="port-desc">
-                                            <div class="grid-item">
-                                                <h3><a href="portfolio-single.html">Quisque non augue</a></h3>
-                                                <span>Photography /    Interior</span>
+                        <div class="gallery-items three-columns grid-small-pad ">
+                            {{#if portfolio}}
+                                {{#each portfolio}}
+                                <div class="gallery-item {{#each metadata.tags}}{{slug}} {{/each}}">
+                                    <div class="grid-item-holder">
+                                        <img  src="{{metadata.lead_image.imgix_url}}"    alt="{{title}}">
+                                        <div class="port-desc-holder">
+                                            <div class="port-desc">
+                                                <div class="grid-item">
+                                                    <h3><a href="/portfolio/{{slug}}">{{title}}</a></h3>
+                                                    <span>{{metadata.location}}</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- 1 end-->
-                            <!-- 2 -->
-                            <div class="gallery-item  gallery-item-second  interior">
-                                <div class="grid-item-holder">
-                                    <img  src="images/folio/thumbs/1.jpg"    alt="">
-                                    <div class="port-desc-holder">
-                                        <div class="port-desc">
-                                            <div class="grid-item">
-                                                <h3><a href="portfolio-single.html">Tincidunt ornare</a></h3>
-                                                <span>Photography /    wood</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 2 end-->
-                            <!-- 3 -->
-                            <div class="gallery-item  design">
-                                <div class="grid-item-holder">
-                                    <img  src="images/folio/thumbs/1.jpg"    alt="">
-                                    <div class="port-desc-holder">
-                                        <div class="port-desc">
-                                            <div class="grid-item">
-                                                <h3><a href="portfolio-single.html">lacus purus</a></h3>
-                                                <span>Photography /    design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 3 end-->
-                            <!-- 4 -->
-                            <div class="gallery-item  houses   interior">
-                                <div class="grid-item-holder">
-                                    <img  src="images/folio/thumbs/1.jpg"    alt="">
-                                    <div class="port-desc-holder">
-                                        <div class="port-desc">
-                                            <div class="grid-item">
-                                                <h3><a href="portfolio-single.html">Phasellus nec</a></h3>
-                                                <span>Photography /    design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 4 end-->
-                            <!-- 5 -->
-                            <div class="gallery-item  houses  design  interior">
-                                <div class="grid-item-holder">
-                                    <img  src="images/folio/thumbs/2.jpg"    alt="">
-                                    <div class="port-desc-holder">
-                                        <div class="port-desc">
-                                            <div class="grid-item">
-                                                <h3><a href="portfolio-single.html">Efficitur urna</a></h3>
-                                                <span>Photography /   Architecture</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 5 end-->                            
-                            <!-- 6 -->
-                            <div class="gallery-item  design interior  construction">
-                                <div class="grid-item-holder">
-                                    <img  src="images/folio/thumbs/1.jpg"    alt="">
-                                    <div class="port-desc-holder">
-                                        <div class="port-desc">
-                                            <div class="grid-item">
-                                                <h3><a href="portfolio-single.html">Integer euismod</a></h3>
-                                                <span>Architecture /    design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 6 end-->
-                            <!-- 7 -->
-                            <div class="gallery-item    design">
-                                <div class="grid-item-holder">
-                                    <img  src="images/folio/thumbs/1.jpg"    alt="">
-                                    <div class="port-desc-holder">
-                                        <div class="port-desc">
-                                            <div class="grid-item">
-                                                <h3><a href="portfolio-single.html">vitae odio</a></h3>
-                                                <span>Photography /    design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 7 end-->
-                            <!-- 8 -->
-                            <div class="gallery-item     interior  design">
-                                <div class="grid-item-holder">
-                                    <img  src="images/folio/thumbs/1.jpg"    alt="">
-                                    <div class="port-desc-holder">
-                                        <div class="port-desc">
-                                            <div class="grid-item">
-                                                <h3><a href="portfolio-single.html">Quisque non augue</a></h3>
-                                                <span>Architecture/  design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 8 end-->
-                            <!-- 9 -->
-                            <div class="gallery-item      design houses">
-                                <div class="grid-item-holder">
-                                    <img  src="images/folio/thumbs/1.jpg"    alt="">
-                                    <div class="port-desc-holder">
-                                        <div class="port-desc">
-                                            <div class="grid-item">
-                                                <h3><a href="portfolio-single.html">condimentum ac sapien</a></h3>
-                                                <span>Photography /   wood</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 9 end--> 
-                            <!-- 10 -->
-                            <div class="gallery-item   design interior">
-                                <div class="grid-item-holder">
-                                    <img  src="images/folio/thumbs/1.jpg"    alt="">
-                                    <div class="port-desc-holder">
-                                        <div class="port-desc">
-                                            <div class="grid-item">
-                                                <h3><a href="portfolio-single.html">Maecenas vitae semper</a></h3>
-                                                <span>Architecture /  Interior</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 10 end-->
-                     
+                                {{/each}}
+                            {{/if}} 
                         </div>
                         <!-- end gallery items -->               
                         <!-- custom-link-holder  --> 

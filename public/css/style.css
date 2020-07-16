@@ -1192,7 +1192,8 @@ article {
 	padding-left:30px;
 	font-size: 10px;
     font-family: 'Muli', sans-serif;
-    line-height: 12px;
+    /*line-height: 12px;*/
+    line-height: 30px;
     text-transform: uppercase;
     padding-left: 63px;
     position: relative;

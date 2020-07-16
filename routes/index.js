@@ -37,7 +37,16 @@ router.get('/about',async (req, res) =>  {
 
 router.get('/portfolio',async (req, res) =>  {
     try {
-        res.render('portfolio', {title: 'Portfolio'});
+        const portfolio = await bucket.getObjects({
+          type: 'portfolio',
+          sort: 'order'
+        })
+        const tags = await bucket.getObjects({
+          type: 'tags',
+        })
+        // res.json({ 'portfolio': portfolio})
+        console.log(tags)
+        res.render('portfolio', { 'portfolio': portfolio.objects, 'tags': tags.objects, 'title': 'Portfolio'});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });
