@@ -28,7 +28,7 @@ router.get('/',async (req, res) =>  {
 
 router.get('/about',async (req, res) =>  {
     try {
-        res.render('coming', {title: 'Coming Soon'});
+        res.render('about', {title: 'About Us'});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });

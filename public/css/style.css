@@ -2289,6 +2289,9 @@ article {
 	text-align:left;
 	text-transform:uppercase;
 }
+.custom-inner h4 {
+	padding-bottom: 0px;
+}
 .custom-inner-dec {
 	float:left;
 	width:100%;
@@ -2299,7 +2302,8 @@ article {
 .custom-inner ul {
 	float:left;
 	width:100%;
-	padding:10px 0 10px 13px;
+	/*padding:10px 0 10px 13px;*/
+	padding: 0px 0 10px 30px;
 	list-style:square;
 }
 .custom-inner ul li {

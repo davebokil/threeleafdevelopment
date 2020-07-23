@@ -393,6 +393,7 @@ function initMonolit() {
                 $(".gallery-filters a.gallery-filter").removeClass("gallery-filter-active");
                 $(this).addClass("gallery-filter-active");
                 return false;
+
             });
             a.isotope("on", "layoutComplete", function(a, b) {
                 var b = a.length;
