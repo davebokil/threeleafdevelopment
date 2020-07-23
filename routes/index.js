@@ -69,7 +69,7 @@ router.get('/portfolio/:slug',async (req, res) =>  {
 
 router.get('/services',async (req, res) =>  {
     try {
-        res.render('coming', {title: 'Coming Soon'});
+        res.render('services', {title: 'Services'});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });

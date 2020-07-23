@@ -1,0 +1,133 @@
+<!--================= main ====================-->
+<div id="main">
+    <!--=============== header ================--> 
+    {{> header}}  
+    <!--=============== wrapper ===============--> 
+    <div id="wrapper">
+        <!-- content-holder  -->
+        <div class="content-holder">
+            <!-- Page title -->
+            <div class="dynamic-title">{{title}}</div>
+            <!-- Page title  end--> 
+            <!-- content  -->
+            <div class="content">
+                <section class="parallax-section">
+                    <div class="parallax-inner">
+                        <div class="bg" data-bg="images/bg/1.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="container">
+                        <div class="page-title">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2> Our <strong> Services</strong></h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="creat-list">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/">Services</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- content end -->
+            <!-- content  -->
+            <div class="content">
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h2 class="section-title">What <strong>We  Do </strong></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div class="services-holder">
+                            <!-- 1 -->
+                            <a class="serv-item" href="#ser1">
+                                <div class="serv-item-inner">
+                                    <img  src="images/home/residential.jpg"   alt="">
+                                    <div class="ser-title">
+                                        <h3>Residential Development</h3>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- 1 end-->
+                            <!-- 2 -->
+                            <a class="serv-item" href="#ser2">
+                                <div class="serv-item-inner">
+                                    <img  src="images/home/commercials.jpg"   alt="">
+                                    <div class="ser-title">
+                                        <h3>Commercial Development</h3>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- 2 end -->
+                            <!-- 3 -->
+                            <a class="serv-item" href="#ser3">
+                                <div class="serv-item-inner">
+                                    <img  src="images/home/mixeduse.jpg"   alt="">
+                                    <div class="ser-title">
+                                        <h3>Property management</h3>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- 3 end -->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- serv-post  -->     
+                                <div class="serv-post">
+                                    <!-- 1 -->
+                                    <div id="ser1" class="serv-details">
+                                        <h3>Residential Development</h3>
+                                        <p>Development and new construction of luxury single-family homes, and luxury condominiums. </p>
+                                        <ul class="ser-list">
+                                            <li>Luxury single-family homes 4,000 sf and up</li>
+                                            <li>Multi-unit condominium new construction</li>
+                                            <li>Multi-unit condominium existing building renovation</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 1 end --> 
+                                    <!-- 2 -->
+                                    <div id="ser2" class="serv-details">
+                                        <h3>Commercial Development</h3>
+                                        <p>Construction and refurbishment for retail, institutional, and office spaces.</p>
+                                        <ul class="ser-list">
+                                            <li>Multi-unit condominium existing building renovation</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 2 end --> 
+                                    <!-- 3 -->
+                                    <div id="ser3" class="serv-details">
+                                        <h3>Property Management</h3>
+                                        <ul class="ser-list">
+                                            <li>We manage each property closely using a vast network. </li>
+                                            <li>Our expertise provides a high touch service that keeps unites rented and well maintained.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 3 end -->  
+                                </div>
+                                <!-- serv-post end-->
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- content end -->
+            {{> footer}}
+            <!-- share  -->
+            <div class="share-inner">
+                <div class="share-container  isShare"  data-share="['facebook','googleplus','twitter','linkedin']"></div>
+                <div class="close-share"></div>
+            </div>
+            <!-- share end -->
+        </div>
+        <!-- content-holder  end-->
+    </div>
+    <!--=============== footer ================--> 
+    {{> leftbar}} 
+</div>
