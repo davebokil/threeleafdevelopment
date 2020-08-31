@@ -13,9 +13,14 @@
             <!-- content  -->
             <!-- content  -->
             <div class="content">
+
                 <section class="parallax-section">
                     <div class="parallax-inner">
-                        <div class="bg" data-bg="images/bg/1.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        {{!-- <div class="bg" data-bg="images/bg/1.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div> --}}
+                            <div class="video-mask"></div>
+                            <!--=============== add you video id  in data-vid="" if you want add sound change data-mv="1" on data-mv="0" ===============-->
+                            <div class="mob-bg bg" data-bg="images/bg/1.jpg"></div>
+                            <div  class="background-youtube" data-vid="dVk_ckSqOfo" data-mv="1"> </div>
                         <div class="overlay"></div>
                     </div>
                     <div class="container">
@@ -61,7 +66,7 @@
                                 {{#each portfolio}}
                                 <div class="gallery-item {{#each metadata.tags}}{{slug}} {{/each}}">
                                     <div class="grid-item-holder">
-                                        <img  src="{{metadata.lead_image.imgix_url}}"    alt="{{title}}">
+                                        <img  src="{{metadata.lead_image.imgix_url}}?q=3&auto=compress&h=800"    alt="{{title}}">
                                         <div class="port-desc-holder">
                                             <div class="port-desc">
                                                 <div class="grid-item">

@@ -925,7 +925,7 @@ article {
 }
 .serv-item {
 	float:left;
-	width:33%;
+	width:50%;
 	position:relative;
 	padding:10px 20px 10px 0;
 	overflow:hidden;
@@ -2415,7 +2415,6 @@ footer.fixed-footer .footer-social li a:hover {
     width: 7px;
     left: 122px;
     background-repeat: repeat-y;
-  	background-image: url(../images/bg-dec.png);
 	opacity:0.2;
 }
 .footer-title {
