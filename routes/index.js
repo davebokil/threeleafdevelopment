@@ -18,8 +18,11 @@ router.get('/',async (req, res) =>  {
             featured: 'Yes'
           }
         })
-        // res.json({ 'portfolio': portfolio})
-        res.render('index', { 'portfolio': portfolio.objects, 'title': 'Home'});
+        const news = await bucket.getObjects({
+          type: 'news',
+        })
+        // res.json({ 'news': news.objects})
+        res.render('index', { 'portfolio': portfolio.objects, 'news': news.objects, title: 'Home'});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });
@@ -43,6 +46,7 @@ router.get('/portfolio',async (req, res) =>  {
         })
         const tags = await bucket.getObjects({
           type: 'tags',
+          sort: 'order'
         })
         // res.json({ 'portfolio': portfolio})
         console.log(tags)
