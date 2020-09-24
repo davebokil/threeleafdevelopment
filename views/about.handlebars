@@ -13,7 +13,7 @@
             <div class="content">
                 <section class="parallax-section">
                     <div class="parallax-inner">
-                        <div class="bg" data-bg="images/home/about.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="bg" data-bg="{{header}}" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
                         <div class="overlay"></div>
                     </div>
                     <div class="container">
@@ -51,13 +51,13 @@
                                     <li>
                                         <div class="team-box" data-top-bottom="transform: translateY(-50px);" data-bottom-top="transform: translateY(50px);">
                                             <div class="team-photo">
-                                                <div class="overlay"></div>
+                                                {{!-- <div class="overlay"></div>
                                                 <ul class="team-social">
                                                     <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                     <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                                     <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                     <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
-                                                </ul>
+                                                </ul> --}}
                                                 <img src="https://images.squarespace-cdn.com/content/v1/5d755b543266a3205bff0398/1574655798344-E33I3JSP8DZDVW0W27XS/ke17ZwdGBToddI8pDm48kHrjr6XQz_FwlnBOObN9v_1Zw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVENLoTjKZhTDeotHQ4l2tojzlKfW0s8n3olr6A4R3h7heFona9BBircsio8BQI8CSU/cover.jpg?format=750w" alt="" class="respimg">
                                             </div>
                                             <div class="team-info">
@@ -71,13 +71,13 @@
                                     <li>
                                         <div class="team-box" data-top-bottom="transform: translateY(100px);" data-bottom-top="transform: translateY(-100px);">
                                             <div class="team-photo">
-                                                <div class="overlay"></div>
+                                                {{!-- <div class="overlay"></div>
                                                 <ul class="team-social">
                                                     <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                     <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                                     <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                     <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
-                                                </ul>
+                                                </ul> --}}
                                                 <img src="https://secureservercdn.net/198.71.233.104/f15.586.myftpupload.com/wp-content/uploads/2017/12/Len-Connaughton.png" alt="" class="respimg">
                                             </div>
                                             <div class="team-info">
@@ -91,13 +91,13 @@
                                     <li>
                                         <div class="team-box" data-top-bottom="transform: translateY(-50px);" data-bottom-top="transform: translateY(50px);">
                                             <div class="team-photo">
-                                                <div class="overlay"></div>
+                                                {{!-- <div class="overlay"></div>
                                                 <ul class="team-social">
                                                     <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                     <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                                     <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                     <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
-                                                </ul>
+                                                </ul> --}}
                                                 <img src="https://images.squarespace-cdn.com/content/v1/5d755b543266a3205bff0398/1577160130192-AQ7K5RH459T3GUV045V7/ke17ZwdGBToddI8pDm48kOyctPanBqSdf7WQMpY1FsRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwwQIrqN0bcqL_6-iJCOAA0qwytzcs0JTq1XS2aqVbyK6GtMIM7F0DGeOwCXa63_4k/Joe-Stanton.jpg?format=750w" alt="" class="respimg">
                                             </div>
                                             <div class="team-info">
@@ -121,15 +121,19 @@
                     <div class="container">
                         <!-- 1 -->
                         <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="section-title  dec-title" style="margin-bottom: 90px;"><span>Our<strong> Story</strong></span></h2>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-7">
-                                <h2 class="section-title">Our <strong> Story</strong></h2>
-                                <div class="parallax-item left-direction">
+                                <div class="parallax-item ">
                                     <div class="paralax-media">
                                         <div class="paralax-wrap">
                                             <img src="images/folio/1.png" class="respimg" alt="">
                                         </div>
                                     </div>
-                                    <div class="parallax-deck" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(500px);" style="right: -80%;">
+                                    <div class="parallax-deck leafright" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(500px);">
                                         <div class="parallax-deck-item" style="max-width: 800px;">
                                             <h3><strong>Beginnings</strong></h3>
                                             <p>Pat Connaughton grew up working with his father Len Connaughton at his job sites as early as the 7th grade. He would haul lumber and sheetrock up and down stairs and clean up the job sites at the end of the day. Joe Stanton would work alongside Pat in the summers. The work was not glamorous but it taught Pat and Joe the meaning of hard work and gave them a first hand perspective in house and building development.</p>  
@@ -146,13 +150,13 @@
                         <div class="row">
                             <div class="col-md-5"></div>
                             <div class="col-md-7">
-                                <div class="parallax-item right-direction">
+                                <div class="parallax-item">
                                     <div class="paralax-media">
                                         <div class="paralax-wrap">
                                             <img src="images/folio/2.png" class="respimg" alt="">
                                         </div>
                                     </div>
-                                    <div class="parallax-deck" data-top-bottom="transform: translateY(-10px);" data-bottom-top="transform: translateY(200px);" style="left: -80%;">
+                                    <div class="parallax-deck leafleft" data-top-bottom="transform: translateY(-10px);" data-bottom-top="transform: translateY(200px);">
                                         <div class="parallax-deck-item" style="max-width: 800px;">
                                             <h3><strong>Establishing a Business</strong></h3>
                                             <p>Three Leaf development was established (initially under the name Beach House LLC) and Len Connaughton closed his company to join his son and work full time on their projects. Together, they developed housing projects in Portland, Oregon as Pat joined the Trailblazers during the 2015/16 and 2016/17 seasons.</p>
@@ -173,7 +177,7 @@
                                             <img src="images/folio/3.png" class="respimg" alt="">
                                         </div>
                                     </div>
-                                    <div class="parallax-deck" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(10px);" style="right: -80%;">
+                                    <div class="parallax-deck leafright" data-top-bottom="transform: translateY(-200px);" data-bottom-top="transform: translateY(10px);">
                                         <div class="parallax-deck-item" style="max-width: 800px;">
                                             <h3><strong>The Path Ahead</strong></h3>
                                             <p>With this new business model in hand, the future of Three Leaf Development is an exciting one. Projects continue to develop in the areas of Oregon, Milwaukee, Boston, and South Bend (Notre Dame). With a handful of investors already on board, Three Leaf continues to raise money to create a bigger investment vehicle; one that will allow for many more athletes to get involved, learn how the business works, while seeing their money work for them.</p>
@@ -204,22 +208,17 @@
                             <div class="col-md-8">
                                 <div class="testimon-slider-holder">
                                     <div class="testimon-slider">
-                                        <!-- 1 -->
-                                        <div class="item">
-                                            <a href="https://www.bizjournals.com/milwaukee/news/2019/12/05/bucks-guard-pat-connaughton-shoots-for-milwaukee.html?iana=hpmvp_mil_news_headline" style="color: white;" target="_blank">
-                                                <h3>Bucks guard Pat Connaughton shoots for Milwaukee development on Brady Street</h3>
-                                            </a>
-                                            <a href="https://www.bizjournals.com/milwaukee/news/2019/12/05/bucks-guard-pat-connaughton-shoots-for-milwaukee.html?iana=hpmvp_mil_news_headline" class="text-link" target="_blank">Via Milwaukee Business Journal</a>
-                                        </div>
-                                        <!-- 1 end-->
-                                        <!-- 2 -->
-                                        <div class="item">
-                                            <a href="https://www.bizjournals.com/milwaukee/news/2019/12/05/bucks-guard-pat-connaughton-shoots-for-milwaukee.html?iana=hpmvp_mil_news_headline" style="color: white;">
-                                                <h3>Bucks guard Pat Connaughton shoots for Milwaukee development on Brady Street</h3>
-                                            </a>
-                                            <a href="https://www.bizjournals.com/milwaukee/news/2019/12/05/bucks-guard-pat-connaughton-shoots-for-milwaukee.html?iana=hpmvp_mil_news_headline" class="text-link" target="_blank">Via Milwaukee Business Journal</a>
-                                        </div>
-                                        <!-- 2 end-->
+
+                                        {{#if news}}
+                                            {{#each news}}
+                                                <div class="item">
+                                                    <a href="{{metadata.url}}" style="color: white;" target="_blank">
+                                                        <h3>{{title}}</h3>
+                                                    </a>
+                                                    <a href="{{metadata.url}}" class="text-link" target="_blank">Via {{metadata.source}}</a>
+                                                </div>
+                                            {{/each}}
+                                        {{/if}} 
                                     </div>
                                     <div class="customNavigation">
                                         <a class="prev-slide transition"><i class="fa fa-angle-left"></i></a>
@@ -231,7 +230,7 @@
                     </div>
                 </section>
             </div>
-            <!-- content end -->
+            <!-- content end --> 
             <!-- content footer-->
             <div class="height-emulator"></div>
             {{> footer}}

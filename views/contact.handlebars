@@ -44,15 +44,13 @@
                                 <p>We’re eager to help you with any questions you have about our services, projects, or process.</p>
                             </div>
                         </div>
-                        <div class="map-box">
-                            <div  id="map-canvas"></div>
-                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48393.60026719826!2d-74.007281!3d40.704806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a161aaa68c5%3A0x11f4f914d4c083b5!2s99%20Wall%20St%20%231809%2C%20New%20York%2C%20NY%2010005!5e0!3m2!1sen!2sus!4v1600922477291!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0; float: left;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="contact-details">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <h3 class="bold-title">Contact  details : </h3>
+                                            <h3 class="bold-title">Contact details : </h3>
                                         </div>
                                         <div class="col-md-4">
                                             <h4>Office in New York</h4>
@@ -76,12 +74,11 @@
                                 <div class="contact-form-holder">
                                     <div id="contact-form">
                                         <div id="message"></div>
-                                        <form method="post" action="php/contact.php" name="contactform" id="contactform">
+                                        <form method="post" action="https://formspree.io/mrgogjle" name="contactform" id="contactform" >
                                             <input name="name" type="text" id="name"  onClick="this.select()" value="Name *" >
                                             <input name="email" type="text" id="email" onClick="this.select()" value="E-mail *" >
-                                            <input type="text"  name="phone" id="phone" placeholder="Phone *" value=""/>            
                                             <textarea name="comments"  id="comments" onClick="this.select()" >Message</textarea>                                                     
-                                            <button type="submit"  id="submit"  data-top-bottom="transform: translateY(-50px);" data-bottom-top="transform: translateY(50px);"><span>Send Message </span></button>                                                                                                      
+                                            <button type="submit"  id="submit"><span>Send Message </span></button>                                                              
                                         </form>
                                     </div>
                                 </div>

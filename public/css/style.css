@@ -1,9 +1,5 @@
 @charset "utf-8";
 /*====================================== 
- [ -Main Stylesheet-
-  Theme: Monolit
-  Version: 1.0
-  Last change: 15/02/2016 ]
   	+++Fonts +++
 	++++General Styles++++
 	++++Typography ++++
@@ -25,6 +21,7 @@
 	++++Facts ++++
 	++++blog ++++
 	++++Share ++++
+	++++about leaf ++++
 	++++Responsive ++++
 */
 /*-------------Import fonts ---------------------------------------*/
@@ -1005,14 +1002,14 @@ article {
 	font-weight: 600;
 	padding-bottom:10px;
 }
-.ser-list {
+.serv-post ul {
 	list-style: circle;
 	float:left;
 	width:100%;
 	padding:10px 0 10px 14px;
 	margin-left: 25px;
 }
-.ser-list li {
+.serv-post li {
 	width:100%;
 	float:left;
 	margin-bottom:4px;
@@ -3382,6 +3379,13 @@ article .section-title {
 .hid-gal {
 	overflow:hidden;
 }
+ /*------ about leaf------------------------------------------------*/
+ .leafright {
+ 	right: -80%;
+ }
+ .leafleft {
+ 	left: -80%;
+ }
 /*------  Responsive ------------------------------------------------------*/
 @media only screen and  (max-width: 1236px) {
 header  {
@@ -3396,6 +3400,12 @@ header  {
 }
 }
 @media only screen and  (max-width: 1036px) {
+	 .leafright {
+ 	right: 0%;
+ }
+ .leafleft {
+ 	left: 0%;
+ } 
 .hid-gal {
 	overflow:auto;
 }

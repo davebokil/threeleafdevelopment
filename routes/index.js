@@ -31,12 +31,20 @@ router.get('/',async (req, res) =>  {
 
 router.get('/about',async (req, res) =>  {
     try {
-        res.render('about', {title: 'About Us'});
+        const header = await bucket.getObject({
+          slug: 'about-header-image'
+        })
+        const news = await bucket.getObjects({
+          type: 'news',
+        })
+        // res.json({ 'about': about.objects[0].metafields[0].url,})
+        res.render('about', { 'header': header.object.metafields[0].url, 'news': news.objects, title: 'About Us'});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });
     }
 });
+
 
 router.get('/portfolio',async (req, res) =>  {
     try {
@@ -73,12 +81,25 @@ router.get('/portfolio/:slug',async (req, res) =>  {
 
 router.get('/services',async (req, res) =>  {
     try {
-        res.render('services', {title: 'Services'});
+        const header = await bucket.getObject({
+          slug: "services-header-image"
+        })
+        const wedo = await bucket.getObject({
+          slug: "what-we-do"
+        })
+        const pm = await bucket.getObject({
+          slug: "property-management"
+        })
+        const development = await bucket.getObject({
+          slug: "development"
+        })
+        // res.json({ 'wedo': wedo.object})
+        res.render('services', { 'header': header.object.metafields[0].url, 'wedo': wedo.object, 'pm': pm.object, 'development': development.object, title: 'Services'});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });
     }
-})
+});
 
 router.get('/contact',async (req, res) =>  {
     try {

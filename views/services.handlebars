@@ -13,7 +13,7 @@
             <div class="content">
                 <section class="parallax-section">
                     <div class="parallax-inner">
-                        <div class="bg" data-bg="https://imgix.cosmicjs.com/63404b90-eb3a-11ea-83a7-c9a4a2156827-services.jpg" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="bg" data-bg="{{header}}" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
                         <div class="overlay"></div>
                     </div>
                     <div class="container">
@@ -40,11 +40,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8">
-                                <h2 class="section-title">What <strong>We  Do </strong></h2>
-                                <p>Three Leaf Development believes the formula for success in real estate development is creating value. Our raw land development, existing building renovation, and building expansion projects have all created a finished product of higher value.</p>
-                                <p>With over 30 years of experience in the acquisition, design, and construction of residential and commercial buildings, our simple and straightforward approach helps make value creation easy.</p>
-                                <p>While each project presents different challenges, they are conceptually the same. Three Leaf employs this understanding to streamline scheduling, material procurement,  and quality control from start to finish. We’re ahead of the curve with our communication with subcontractors and suppliers to avoid schedule delays—keeping projects on budget and on track.</p>
-                                <p>The formula of creating value is a simple one, and value is created only when the project is complete.</p>
+                                <h2 class="section-title"><strong>{{wedo.title}}</strong></h2>
+                                {{{wedo.content}}}
                             </div>
                         </div>
                         <div class="services-holder">
@@ -75,23 +72,12 @@
                                 <div class="serv-post"> 
                                     <!-- 2 -->
                                     <div id="ser2" class="serv-details">
-                                        <h3>Development</h3>
-                                        <p>Construction and refurbishment for retail, institutional, and office spaces. Development and new construction of luxury single-family homes, and luxury condominiums.</p>
-                                        <ul class="ser-list">
-                                            <li>Multi-unit condominium existing building renovation</li>
-                                            <li>Luxury single-family homes 4,000 sf and up</li>
-                                            <li>Multi-unit condominium new construction</li>
-                                            <li>Multi-unit condominium existing building renovation</li>
-                                        </ul>
+                                        {{{development.content}}}
                                     </div>
                                     <!-- 2 end --> 
                                     <!-- 3 -->
                                     <div id="ser3" class="serv-details">
-                                        <h3>Property Management</h3>
-                                        <ul class="ser-list">
-                                            <li>We manage each property closely using a vast network. </li>
-                                            <li>Our expertise provides a high touch service that keeps unites rented and well maintained.</li>
-                                        </ul>
+                                        {{{pm.content}}}
                                     </div>
                                     <!-- 3 end -->  
                                 </div>
