@@ -21,7 +21,7 @@ router.get('/',async (req, res) =>  {
         const news = await bucket.getObjects({
           type: 'news',
         })
-        // res.json({ 'news': news.objects})
+        // res.json({ 'header': header})
         res.render('index', { 'portfolio': portfolio.objects, 'news': news.objects, title: 'Home'});
     }
     catch (err) {
