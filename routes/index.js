@@ -45,6 +45,36 @@ router.get('/about',async (req, res) =>  {
     }
 });
 
+router.get('/leasings',async (req, res) =>  {
+    try {
+        const header = await bucket.getMedia({
+          folder: 'leasing-page'
+        })
+        const leasings = await bucket.getObjects({
+          type: 'leasings',
+          sort: 'order'
+        })
+        // res.json({ 'header': header})
+        res.render('leasings', { 'leasings': leasings.objects, 'title': 'Leasings', 'header': header.media[0].imgix_url});
+    }
+    catch (err) {
+        res.render('error', { title: '404: Error' });
+    }
+});
+
+router.get('/leasings/:slug',async (req, res) =>  {
+    try {
+        const leasings = await bucket.getObject({
+            type: 'leasings',
+            slug: req.params.slug
+        })
+        res.render('leasings-single', {'leasings': leasings.object, 'title': 'Leasings'});
+        // res.json({ 'portfolio': portfolio.object})
+    }
+    catch (err) {
+        res.render('error', { title: '404: Error' });
+    }
+});
 
 router.get('/portfolio',async (req, res) =>  {
     try {

@@ -1,0 +1,80 @@
+<!--================= main ====================-->
+<div id="main">
+    <!--=============== header ================--> 
+    {{> header}}  
+    <!--=============== wrapper ===============--> 
+    <div id="wrapper">
+        <!-- content-holder  -->
+        <div class="content-holder">
+            <!-- Page title -->
+            <div class="dynamic-title">{{leasings.title}}</div>
+            <!-- Page title  end--> 
+            <!-- content  -->
+            <!-- content  -->
+            <div class="content">
+                <section class="parallax-section">
+                    <div class="parallax-inner">
+                        <div class="bg" data-bg="{{leasings.thumbnail}}?q=&auto=compress,enhance," data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="container">
+                        <div class="page-title">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2><strong>{{leasings.title}}</strong></h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="creat-list">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/leasings">Leasings</a></li>
+                                        <li><a href="/leasings/{{leasings.slug}}">{{leasings.title}}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- content end -->
+            <div class="content">
+                <section>
+                    <div class="container">
+                        <!-- single slider  end -->
+                        <div class="custom-inner-holder">
+                            <!-- 1 -->  
+                            <div class="custom-inner">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        {{{leasings.content}}}
+                                        <div class="content-nav">
+                                            <ul>
+                                                <li><a href="/leasings" class=" text-link">Back to all Leasings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 -->
+                        </div>
+                        <!-- custom-link-holder  end -->
+                    </div>
+                </section>
+            </div>
+            <!-- content end -->
+            <!-- content footer-->
+            <div class="height-emulator"></div>
+            {{> footer}}
+            <!-- content footer end -->
+            <!-- share  -->
+            <div class="share-inner">
+                <div class="share-container  isShare"  data-share="['facebook','googleplus','twitter','linkedin']"></div>
+                <div class="close-share"></div>
+            </div>
+            <!-- share end -->
+        </div>
+        <!-- content-holder  end-->
+        {{> leftbar}} 
+    </div> 
+    <!--=============== footer ================--> 
+    {{> leftbar}} 
+</div>

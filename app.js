@@ -8,25 +8,19 @@ var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-// var mongo = require('mongodb');
-// var mongoose = require('mongoose');
 var enforce = require('express-sslify');
 const helmet = require('helmet')
-
-// if (process.env.MONGODB_URI) {
-//     mongoose.connect(process.env.MONGODB_URI);
-// } else {
-//     mongoose.connect('mongodb://localhost/loginapp');
-// }
+var compression = require ('compression')
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 // Init App
 var app = express();
+app.use(compression())
 
 // Enforce HTTPS
-// app.use(enforce.HTTPS({ trustProtoHeader: true }))
+app.use(enforce.HTTPS({ trustProtoHeader: true }))
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
