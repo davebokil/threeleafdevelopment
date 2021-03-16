@@ -20,7 +20,7 @@ var app = express();
 app.use(compression())
 
 // Enforce HTTPS
-app.use(enforce.HTTPS({ trustProtoHeader: true }))
+// app.use(enforce.HTTPS({ trustProtoHeader: true }))
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
