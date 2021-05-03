@@ -21,8 +21,11 @@ router.get('/',async (req, res) =>  {
         const news = await bucket.getObjects({
           type: 'news',
         })
-        // res.json({ 'header': header})
-        res.render('index', { 'portfolio': portfolio.objects, 'news': news.objects, title: 'Home'});
+        const description = await bucket.getObject({
+          slug: 'seo-home-page'
+        })
+        // res.json({ 'description': description})
+        res.render('index', { 'portfolio': portfolio.objects, 'news': news.objects, title: 'Home', 'description': description.object.metadata.seo});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });
@@ -37,8 +40,11 @@ router.get('/about',async (req, res) =>  {
         const news = await bucket.getObjects({
           type: 'news',
         })
+        const description = await bucket.getObject({
+          slug: 'seo-about-page'
+        })
         // res.json({ 'about': about.objects[0].metafields[0].url,})
-        res.render('about', { 'header': header.object.metafields[0].url, 'news': news.objects, title: 'About Us'});
+        res.render('about', { 'header': header.object.metafields[0].url, 'news': news.objects, title: 'About Us', 'description': description.object.metadata.seo});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });
@@ -54,8 +60,11 @@ router.get('/leasings',async (req, res) =>  {
           type: 'leasings',
           sort: 'order'
         })
+        const description = await bucket.getObject({
+          slug: 'seo-leasings-page'
+        })
         // res.json({ 'header': header})
-        res.render('leasings', { 'leasings': leasings.objects, 'title': 'Leasings', 'header': header.media[0].imgix_url});
+        res.render('leasings', { 'leasings': leasings.objects, 'title': 'Leasings', 'header': header.media[0].imgix_url, 'description': description.object.metadata.seo});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });
@@ -68,7 +77,10 @@ router.get('/leasings/:slug',async (req, res) =>  {
             type: 'leasings',
             slug: req.params.slug
         })
-        res.render('leasings-single', {'leasings': leasings.object, 'title': 'Leasings'});
+        const description = await bucket.getObject({
+          slug: 'seo-leasings-page'
+        })
+        res.render('leasings-single', {'leasings': leasings.object, 'title': 'Leasings', 'description': description.object.metadata.seo });
         // res.json({ 'portfolio': portfolio.object})
     }
     catch (err) {
@@ -86,9 +98,12 @@ router.get('/portfolio',async (req, res) =>  {
           type: 'tags',
           sort: 'order'
         })
+        const description = await bucket.getObject({
+          slug: 'seo-portfolio-page'
+        })
         // res.json({ 'portfolio': portfolio})
-        console.log(tags)
-        res.render('portfolio', { 'portfolio': portfolio.objects, 'tags': tags.objects, 'title': 'Portfolio'});
+        // console.log(tags)
+        res.render('portfolio', { 'portfolio': portfolio.objects, 'tags': tags.objects, 'title': 'Portfolio', 'description': description.object.metadata.seo});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });
@@ -101,7 +116,10 @@ router.get('/portfolio/:slug',async (req, res) =>  {
             type: 'portfolio',
             slug: req.params.slug
         })
-        res.render('portfolio-single', {'portfolio': portfolio.object, 'title': portfolio.object.title});
+        const description = await bucket.getObject({
+          slug: 'seo-portfolio-page'
+        })
+        res.render('portfolio-single', {'portfolio': portfolio.object, 'title': portfolio.object.title, 'description': description.object.metadata.seo});
         // res.json({ 'portfolio': portfolio.object})
     }
     catch (err) {
@@ -123,8 +141,11 @@ router.get('/services',async (req, res) =>  {
         const development = await bucket.getObject({
           slug: "development"
         })
+        const description = await bucket.getObject({
+          slug: 'seo-services-page'
+        })
         // res.json({ 'wedo': wedo.object})
-        res.render('services', { 'header': header.object.metafields[0].url, 'wedo': wedo.object, 'pm': pm.object, 'development': development.object, title: 'Services'});
+        res.render('services', { 'header': header.object.metafields[0].url, 'wedo': wedo.object, 'pm': pm.object, 'development': development.object, title: 'Services', 'description': description.object.metadata.seo});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });
@@ -133,7 +154,10 @@ router.get('/services',async (req, res) =>  {
 
 router.get('/contact',async (req, res) =>  {
     try {
-        res.render('contact', {title: 'Contact Us'});
+        const description = await bucket.getObject({
+          slug: 'seo-contact-page'
+        })
+        res.render('contact', {title: 'Contact Us', 'description': description.object.metadata.seo});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });

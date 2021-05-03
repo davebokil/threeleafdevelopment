@@ -6,8 +6,15 @@
         <title>{{title}} - Three Leaf Development</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="robots" content="index, follow"/>
-        <meta name="keywords" content=""/>
-        <meta name="description" content=""/>
+        {{#if description}}
+        <meta name="description" content="{{description}}"/>
+        {{else}}
+        <meta name="description" content="Three Leaf Development is a leader in property management, with over 30 years of expertise and experience in real estate development."/>
+        {{/if}}
+        {{!-- {{#if description}} --}}
+            
+        {{!-- {{/if}} --}}
+        {{!--<meta name="description" content=""/>--}}        
         <!--=============== css  ===============-->	
         <link type="text/css" rel="stylesheet" href="/css/reset.css">
         <link type="text/css" rel="stylesheet" href="/css/plugins.css">
