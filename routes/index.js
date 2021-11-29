@@ -24,8 +24,11 @@ router.get('/',async (req, res) =>  {
         const description = await bucket.getObject({
           slug: 'seo-home-page'
         })
-        // res.json({ 'description': description})
-        res.render('index', { 'portfolio': portfolio.objects, 'news': news.objects, title: 'Home', 'description': description.object.metadata.seo});
+        const introtext = await bucket.getObject ({
+            slug: 'intro-text'
+        })
+        // res.json({ 'introtext': introtext})
+        res.render('index', { 'introtext': introtext.object, 'portfolio': portfolio.objects, 'news': news.objects, title: 'Home', 'description': description.object.metadata.seo});
     }
     catch (err) {
         res.render('error', { title: '404: Error' });
